@@ -1,10 +1,5 @@
 declare type State = {
     [key: string]: boolean;
 };
-declare type BreakpointChecks = {
-    isMobile: boolean;
-    isTablet: boolean;
-    isDesktop: boolean;
-} & State;
-declare const useMatchBreakpoints: () => BreakpointChecks;
+declare const useMatchBreakpoints: () => State;
 export default useMatchBreakpoints;

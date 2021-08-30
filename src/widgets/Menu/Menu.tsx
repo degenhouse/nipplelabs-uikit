@@ -6,7 +6,9 @@ import Flex from "../../components/Box/Flex";
 import { useMatchBreakpoints } from "../../hooks";
 import Logo from "./components/Logo";
 import Panel from "./components/Panel";
+import UserBlock from "./components/UserBlock";
 import { NavProps } from "./types";
+import Avatar from "./components/Avatar";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 
 const Wrapper = styled.div`
@@ -26,7 +28,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   padding-right: 16px;
   width: 100%;
   height: ${MENU_HEIGHT}px;
-  background-color: ${({ theme }) => theme.nav.background};
+  background-color: ${({ theme }) => theme.nav.navbackground};
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
@@ -45,8 +47,8 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   max-width: 100%;
 
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
+    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_FULL}px`};
+    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_FULL}px)`};
   }
 `;
 
@@ -60,8 +62,9 @@ const MobileOnlyOverlay = styled(Overlay)`
 `;
 
 const Menu: React.FC<NavProps> = ({
-  userMenu,
-  globalMenu,
+  account,
+  login,
+  logout,
   isDark,
   toggleTheme,
   langs,
@@ -69,11 +72,12 @@ const Menu: React.FC<NavProps> = ({
   currentLang,
   cakePriceUsd,
   links,
+  profile,
   children,
 }) => {
-  const { isMobile, isTablet } = useMatchBreakpoints();
-  const isSmallerScreen = isMobile || isTablet;
-  const [isPushed, setIsPushed] = useState(!isSmallerScreen);
+  const { isXl } = useMatchBreakpoints();
+  const isMobile = isXl === false;
+  const [isPushed, setIsPushed] = useState(!isMobile);
   const [showMenu, setShowMenu] = useState(true);
   const refPrevOffset = useRef(window.pageYOffset);
 
@@ -118,14 +122,17 @@ const Menu: React.FC<NavProps> = ({
           isDark={isDark}
           href={homeLink?.href ?? "/"}
         />
-        <Flex>
-          {globalMenu} {userMenu}
-        </Flex>
+        {!!login && !!logout && (
+          <Flex>
+            <UserBlock account={account} login={login} logout={logout} />
+            {profile && <Avatar profile={profile} />}
+          </Flex>
+        )}
       </StyledNav>
       <BodyWrapper>
         <Panel
           isPushed={isPushed}
-          isMobile={isSmallerScreen}
+          isMobile={isMobile}
           showMenu={showMenu}
           isDark={isDark}
           toggleTheme={toggleTheme}

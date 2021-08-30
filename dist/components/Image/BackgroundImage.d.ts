@@ -1,4 +1,4 @@
 import React from "react";
-import { BackgroundImageProps } from "./types";
-declare const BackgroundImage: React.FC<BackgroundImageProps>;
+import { ImageProps } from "./types";
+declare const BackgroundImage: React.FC<ImageProps>;
 export default BackgroundImage;

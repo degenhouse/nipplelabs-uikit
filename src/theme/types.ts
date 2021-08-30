@@ -6,7 +6,6 @@ export type MediaQueries = {
   md: string;
   lg: string;
   xl: string;
-  xxl: string;
   nav: string;
 };
 
@@ -44,9 +43,12 @@ export type Colors = {
   primaryDark: string;
   secondary: string;
   tertiary: string;
+  slippage: string;
   success: string;
   failure: string;
   warning: string;
+  white: string;
+  max: string;
   cardBorder: string;
   contrast: string;
   dropdown: string;
@@ -56,7 +58,9 @@ export type Colors = {
   inputSecondary: string;
   background: string;
   backgroundDisabled: string;
+  skeletonBackground: string;
   backgroundAlt: string;
+  cardbackground: string;
   text: string;
   textDisabled: string;
   textSubtle: string;
@@ -68,9 +72,6 @@ export type Colors = {
   // Additional colors
   binance: string;
   overlay: string;
-  gold: string;
-  silver: string;
-  bronze: string;
 };
 
 export type ZIndices = {

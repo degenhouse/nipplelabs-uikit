@@ -24,12 +24,37 @@ export declare const styleVariants: {
         borderColor: string;
         boxShadow: string;
         color: string;
-        ":disabled": {
-            backgroundColor: string;
-        };
+    };
+    eprimary: {
+        backgroundColor: string;
+        border: string;
+        borderColor: string;
+        boxShadow: string;
+        color: string;
+    };
+    max: {
+        backgroundColor: string;
+        boxShadow: string;
+        color: string;
     };
     tertiary: {
         backgroundColor: string;
+        border: string;
+        borderColor: string;
+        boxShadow: string;
+        color: string;
+    };
+    slippage: {
+        backgroundColor: string;
+        border: string;
+        borderColor: string;
+        boxShadow: string;
+        color: string;
+    };
+    swhite: {
+        backgroundColor: string;
+        border: string;
+        borderColor: string;
         boxShadow: string;
         color: string;
     };
@@ -46,6 +71,11 @@ export declare const styleVariants: {
         color: string;
     };
     text: {
+        backgroundColor: string;
+        color: string;
+        boxShadow: string;
+    };
+    texttertiary: {
         backgroundColor: string;
         color: string;
         boxShadow: string;

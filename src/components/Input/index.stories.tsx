@@ -2,13 +2,9 @@ import React from "react";
 import styled from "styled-components";
 /* eslint-disable import/no-unresolved */
 import { Meta } from "@storybook/react/types-6-0";
-import Search from "../Svg/Icons/Search";
-import StarFill from "../Svg/Icons/StarFill";
 import Heading from "../Heading/Heading";
 import Input from "./Input";
-import InputGroup from "./InputGroup";
 import { scales } from "./types";
-import Box from "../Box/Box";
 
 const Row = styled.div`
   display: flex;
@@ -41,21 +37,5 @@ export const Default: React.FC = () => {
         </>
       ))}
     </div>
-  );
-};
-
-export const Icons: React.FC = () => {
-  return (
-    <Box width="300px">
-      <InputGroup startIcon={<Search width="18px" />} endIcon={<StarFill width="18px" />} mb="24px" scale="sm">
-        <Input type="text" value="Input Group" />
-      </InputGroup>
-      <InputGroup startIcon={<Search width="24px" />} endIcon={<StarFill width="24px" />} mb="24px" scale="md">
-        <Input type="text" value="Input Group" />
-      </InputGroup>
-      <InputGroup startIcon={<Search width="32px" />} endIcon={<StarFill width="32px" />} mb="24px" scale="lg">
-        <Input type="text" value="Input Group" />
-      </InputGroup>
-    </Box>
   );
 };

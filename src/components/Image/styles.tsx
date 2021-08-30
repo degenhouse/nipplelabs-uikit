@@ -10,7 +10,7 @@ interface StyledImageProps extends ImageProps {
 export const StyledPrimaryImage = styled(TokenImage)<StyledImageProps>`
   position: absolute;
   width: ${({ variant }) =>
-    variant === variants.DEFAULT ? "92%" : "82%"}; // 92, 82 are arbitrary numbers to fit the variant
+    variant === variants.DEFAULT ? "100%" : "82%"}; // 92, 82 are arbitrary numbers to fit the variant
 
   ${StyledSystemVariant({
     variants: {
@@ -34,13 +34,13 @@ export const StyledPrimaryImage = styled(TokenImage)<StyledImageProps>`
 
 export const StyledSecondaryImage = styled(TokenImage)<StyledImageProps>`
   position: absolute;
-  width: 50%;
+  width: 100%;
 
   ${StyledSystemVariant({
     variants: {
       [variants.DEFAULT]: {
         bottom: 0,
-        left: "auto",
+        left: 27,
         right: 0,
         top: "auto",
         zIndex: 6,

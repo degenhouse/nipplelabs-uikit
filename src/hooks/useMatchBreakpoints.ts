@@ -5,12 +5,6 @@ type State = {
   [key: string]: boolean;
 };
 
-type BreakpointChecks = {
-  isMobile: boolean;
-  isTablet: boolean;
-  isDesktop: boolean;
-} & State;
-
 type MediaQueries = {
   [key: string]: string;
 };
@@ -42,7 +36,7 @@ const mediaQueries: MediaQueries = (() => {
 
 const getKey = (size: string) => `is${size.charAt(0).toUpperCase()}${size.slice(1)}`;
 
-const useMatchBreakpoints = (): BreakpointChecks => {
+const useMatchBreakpoints = (): State => {
   const [state, setState] = useState<State>(() => {
     return Object.keys(mediaQueries).reduce((accum, size) => {
       const key = getKey(size);
@@ -84,12 +78,7 @@ const useMatchBreakpoints = (): BreakpointChecks => {
     };
   }, [setState]);
 
-  return {
-    ...state,
-    isMobile: state.isXs || state.isSm,
-    isTablet: state.isMd || state.isLg,
-    isDesktop: state.isXl || state.isXxl,
-  };
+  return state;
 };
 
 export default useMatchBreakpoints;

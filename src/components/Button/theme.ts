@@ -24,17 +24,42 @@ export const styleVariants = {
   [variants.SECONDARY]: {
     backgroundColor: "transparent",
     border: "2px solid",
+    borderColor: "secondary",
+    boxShadow: "none",
+    color: "secondary",
+  },
+  [variants.EPRIMARY]: {
+    backgroundColor: "transparent",
+    border: "2px solid",
     borderColor: "primary",
     boxShadow: "none",
     color: "primary",
-    ":disabled": {
-      backgroundColor: "transparent",
-    },
+  },
+  [variants.MAX]: {
+    backgroundColor: "max",
+    boxShadow: "none",
+    color: "white",
   },
   [variants.TERTIARY]: {
-    backgroundColor: "tertiary",
+    backgroundColor: "transparent",
+    border: "2px solid",
+    borderColor: "tertiary",
     boxShadow: "none",
-    color: "primary",
+    color: "tertiary",
+  },
+  [variants.SLIPPAGE]: {
+    backgroundColor: "transparent",
+    border: "2px solid",
+    borderColor: "slippage",
+    boxShadow: "none",
+    color: "slippage",
+  },
+  [variants.SWHITE]: {
+    backgroundColor: "transparent",
+    border: "2px solid",
+    borderColor: "secondary",
+    boxShadow: "none",
+    color: "secondary",
   },
   [variants.SUBTLE]: {
     backgroundColor: "textSubtle",
@@ -51,6 +76,11 @@ export const styleVariants = {
   [variants.TEXT]: {
     backgroundColor: "transparent",
     color: "primary",
+    boxShadow: "none",
+  },
+  [variants.TEXTTERTIARY]: {
+    backgroundColor: "white",
+    color: "tertiary",
     boxShadow: "none",
   },
 };

@@ -22,18 +22,14 @@ export const links = [
     href: "/",
   },
   {
-    label: "Trade",
-    icon: "TradeIcon",
-    items: [
-      {
-        label: "Exchange",
-        href: "https://exchange.pancakeswap.finance",
-      },
-      {
-        label: "Liquidity",
-        href: "https://exchange.pancakeswap.finance/#/pool",
-      },
-    ],
+    label: "Swap",
+    icon: "SwapMenuIcon",
+    href: "/swap",
+  },
+  {
+    label: "Liquidity",
+    icon: "LiquidityMenuIcon",
+    href: "/pool",
   },
   {
     label: "Farms",
@@ -42,9 +38,14 @@ export const links = [
     status: status.LIVE,
   },
   {
-    label: "Pools",
+    label: "Dog Park",
     icon: "PoolIcon",
-    href: "/syrup",
+    href: "/pools",
+  },
+  {
+    label: "Info",
+    icon: "InfoIcon",
+    href: "/info"
   },
   {
     label: "Lottery",
@@ -52,88 +53,25 @@ export const links = [
     href: "/lottery",
   },
   {
-    label: "NFT",
-    icon: "NftIcon",
-    href: "/nft",
-  },
-  {
-    label: "Team Battle",
-    icon: "TeamBattleIcon",
-    href: "/competition",
-    status: status.SOON,
-  },
-  {
-    label: "Profile & Teams",
-    icon: "GroupsIcon",
-    status: status.LIVE,
-    items: [
-      {
-        label: "Leaderboard",
-        href: "/teams",
-        status: status.NEW,
-      },
-      {
-        label: "YourProfile",
-        href: "/",
-      },
-    ],
-    calloutClass: "rainbow",
-  },
-  {
-    label: "Info",
-    icon: "InfoIcon",
-    items: [
-      {
-        label: "Overview",
-        href: "https://pancakeswap.info",
-      },
-      {
-        label: "Tokens",
-        href: "https://pancakeswap.info/tokens",
-      },
-      {
-        label: "Pairs",
-        href: "https://pancakeswap.info/pairs",
-      },
-      {
-        label: "Accounts",
-        href: "https://pancakeswap.info/accounts",
-      },
-    ],
-  },
-  {
-    label: "IFO",
-    icon: "IfoIcon",
-    items: [
-      {
-        label: "Next",
-        href: "/ifo",
-      },
-      {
-        label: "History",
-        href: "/ifo/history",
-      },
-    ],
+    label: "Buy FTM",
+    icon: "BuyftmIcon",
+    href: "/buyftm",
   },
   {
     label: "More",
     icon: "MoreIcon",
     items: [
       {
-        label: "Voting",
-        href: "https://voting.pancakeswap.finance",
+        label: "Shiba Fantom",
+        href: "https://www.shibafantom.com/",
       },
       {
         label: "Github",
-        href: "https://github.com/pancakeswap",
+        href: "https://github.com/Shiba-Fantom",
       },
       {
-        label: "Docs",
-        href: "https://docs.pancakeswap.finance",
-      },
-      {
-        label: "Blog",
-        href: "https://pancakeswap.medium.com",
+        label: "Fantom",
+        href: "https://fantom.foundation/",
       },
     ],
   },
@@ -205,7 +143,7 @@ export const socials = [
   },
 ];
 
-export const MENU_HEIGHT = 64;
+export const MENU_HEIGHT = 70;
 export const MENU_ENTRY_HEIGHT = 48;
 export const SIDEBAR_WIDTH_FULL = 240;
-export const SIDEBAR_WIDTH_REDUCED = 56;
+export const SIDEBAR_WIDTH_REDUCED = 0;

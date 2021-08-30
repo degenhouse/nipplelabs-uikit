@@ -1,8 +1,7 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 /* eslint-disable import/no-unresolved */
 import { Meta } from "@storybook/react/types-6-0";
-import Box from "../Box/Box";
 import Heading from "../Heading/Heading";
 import CardRibbon from "./CardRibbon";
 import UIKitCardHeader from "./CardHeader";
@@ -58,38 +57,8 @@ export const Default: React.FC = () => {
 };
 
 export const CardHeader: React.FC = () => {
-  const theme = useTheme();
-  // This is example how to make card header "overlap" the border.
-  // Seems to be easiest solution that works on all screens and does not rely on absolute positioning trickery
-  const headerHeight = "60px";
-  const customHeadingColor = "#7645D9";
-  const gradientStopPoint = `calc(${headerHeight} + 1px)`;
-  const borderBackground = `linear-gradient(${customHeadingColor} ${gradientStopPoint}, ${theme.colors.cardBorder} ${gradientStopPoint})`;
-
-  // Gradient overlap is also possible, just put the "dividing" gradient first and after that the header gradient
-  const gradientBorderColor = `linear-gradient(transparent ${gradientStopPoint}, ${theme.colors.cardBorder} ${gradientStopPoint}), ${theme.colors.gradients.cardHeader}`;
   return (
     <div style={{ padding: "32px", width: "500px" }}>
-      <Row>
-        <Card borderBackground={borderBackground}>
-          <Box background={customHeadingColor} p="16px" height={headerHeight}>
-            <Heading size="xl" color="white">
-              Custom overlapping Header
-            </Heading>
-          </Box>
-          <CardBody>The border on sides of header is covered</CardBody>
-          <CardFooter>Footer</CardFooter>
-        </Card>
-      </Row>
-      <Row>
-        <Card borderBackground={gradientBorderColor}>
-          <Box background={theme.colors.gradients.cardHeader} p="16px" height={headerHeight}>
-            <Heading size="xl">Gradient overlapping Header</Heading>
-          </Box>
-          <CardBody>The border on sides of header is covered</CardBody>
-          <CardFooter>Footer</CardFooter>
-        </Card>
-      </Row>
       <Row>
         <Card>
           <UIKitCardHeader>
@@ -129,17 +98,6 @@ export const CardHeader: React.FC = () => {
     </div>
   );
 };
-
-export const CustomBackground: React.FC = () => {
-  return (
-    <div style={{ padding: "32px", width: "500px" }}>
-      <Card background="#f0c243" borderBackground="#b88700">
-        <CardBody style={{ height: "150px" }}>Custom background</CardBody>
-      </Card>
-    </div>
-  );
-};
-
 export const Ribbon: React.FC = () => {
   return (
     <div style={{ padding: "32px", width: "500px" }}>

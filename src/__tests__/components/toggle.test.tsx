@@ -12,13 +12,13 @@ it("renders correctly", () => {
       background-color: #FFFFFF;
       border-radius: 50%;
       cursor: pointer;
-      height: 26px;
-      left: 3px;
+      height: 32px;
+      left: 4px;
       position: absolute;
-      top: 3px;
+      top: 4px;
       -webkit-transition: left 200ms ease-in;
       transition: left 200ms ease-in;
-      width: 26px;
+      width: 32px;
       z-index: 1;
     }
 
@@ -32,7 +32,7 @@ it("renders correctly", () => {
     }
 
     .c1:checked + .c2 {
-      left: calc(100% - 30px);
+      left: calc(100% - 36px);
     }
 
     .c1:focus + .c2 {
@@ -56,11 +56,11 @@ it("renders correctly", () => {
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
       display: inline-flex;
-      height: 32px;
+      height: 40px;
       position: relative;
       -webkit-transition: background-color 200ms;
       transition: background-color 200ms;
-      width: 56px;
+      width: 72px;
     }
 
     <div

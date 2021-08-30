@@ -16,9 +16,6 @@ export const Default: React.FC = () => {
       <div style={{ marginBottom: "32px" }}>
         <PancakeToggle checked={isChecked} onChange={toggle} />
       </div>
-      <div style={{ marginBottom: "32px" }}>
-        <PancakeToggle checked={isChecked} onChange={toggle} scale="md" />
-      </div>
       <div>
         <PancakeToggle checked={isChecked} onChange={toggle} scale="sm" />
       </div>

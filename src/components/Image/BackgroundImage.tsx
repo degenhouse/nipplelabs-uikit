@@ -1,19 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import observerOptions from "./options";
 import Wrapper from "./Wrapper";
-import { BackgroundImageProps } from "./types";
-import Placeholder from "./Placeholder";
+import { ImageProps } from "./types";
 
 const StyledBackgroundImage = styled(Wrapper)`
   background-repeat: no-repeat;
   background-size: contain;
 `;
 
-const BackgroundImage: React.FC<BackgroundImageProps> = ({ loadingPlaceholder, src, width, height, ...props }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const BackgroundImage: React.FC<ImageProps> = ({ src, width, height, ...props }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const placeholder = loadingPlaceholder || <Placeholder />;
 
   useEffect(() => {
     let observer: IntersectionObserver;
@@ -25,16 +22,7 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({ loadingPlaceholder, s
         entries.forEach((entry) => {
           const { isIntersecting } = entry;
           if (isIntersecting) {
-            if (src) {
-              // Load the image via an image element so we can show a placeholder until the image is downloaded
-              const img = document.createElement("img");
-              img.onload = () => {
-                div.style.backgroundImage = `url("${src}")`;
-                setIsLoaded(true);
-              };
-              img.src = src;
-            }
-
+            div.style.backgroundImage = `url("${src}")`;
             observer.disconnect();
           }
         });
@@ -46,13 +34,9 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({ loadingPlaceholder, s
         observer.disconnect();
       }
     };
-  }, [src, setIsLoaded]);
+  }, [src]);
 
-  return (
-    <StyledBackgroundImage ref={ref} width={width} height={height} {...props}>
-      {!isLoaded && placeholder}
-    </StyledBackgroundImage>
-  );
+  return <StyledBackgroundImage ref={ref} width={width} height={height} {...props} />;
 };
 
 export default BackgroundImage;

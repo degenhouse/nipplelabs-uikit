@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { SpaceProps, TypographyProps } from "styled-system";
+import { SpaceProps } from "styled-system";
 export declare const variants: {
     readonly PRIMARY: "primary";
     readonly SECONDARY: "secondary";
@@ -16,11 +16,10 @@ export declare const scales: {
 };
 export declare type Scale = typeof scales[keyof typeof scales];
 export declare type Variant = typeof variants[keyof typeof variants];
-export interface TagProps extends SpaceProps, TypographyProps {
+export interface TagProps extends SpaceProps {
     variant?: Variant;
     scale?: Scale;
     startIcon?: ReactNode;
     endIcon?: ReactNode;
     outline?: boolean;
-    textTransform?: "uppercase" | "lowercase" | "capitalize";
 }

@@ -8,7 +8,6 @@ import BackgroundImage from "./BackgroundImage";
 import Img from "./Image";
 import TokenImage from "./TokenImage";
 import TokenPairImage from "./TokenPairImage";
-import ProfileAvatarComponent from "./ProfileAvatar";
 import tokenList from "./tokens";
 
 export default {
@@ -108,8 +107,8 @@ export const TokenPairImages: React.FC = () => {
             <TokenPairImage
               primarySrc={primarySrc}
               secondarySrc={secondarySrc}
-              height={64}
-              width={64}
+              height={37}
+              width={37}
               title={token.symbol}
               mb="16px"
             />
@@ -117,24 +116,13 @@ export const TokenPairImages: React.FC = () => {
               variant="inverted"
               primarySrc={secondarySrc}
               secondarySrc={primarySrc}
-              height={64}
-              width={64}
+              height={37}
+              width={37}
               title={token.symbol}
             />
           </StyledBox>
         );
       })}
     </Flex>
-  );
-};
-
-export const ProfileAvatar: React.FC = () => {
-  return (
-    <div>
-      <Text>Shows Placeholder until image is downloaded</Text>
-      <ProfileAvatarComponent src="https://via.placeholder.com/960x960" width={64} height={64} alt="test" mb="16px" />
-      <Text>Shows placeholder if the image does not download</Text>
-      <ProfileAvatarComponent src="https://via.placeholder.com" width={64} height={64} alt="test" />
-    </div>
   );
 };
