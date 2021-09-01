@@ -26,7 +26,7 @@ const StyledButtonMenu = styled.div<StyledButtonMenuProps>`
     margin-left: 0px; // To avoid focus shadow overlap
   }
   svg {
-    fill: ${({ theme }) => theme.colors.white};
+    fill: ${({ theme }) => theme.colors.text};
   }
   ${space}
 `;

@@ -17,7 +17,7 @@ const getBorderColor = ({ theme, variant }: StyledButtonMenuProps) => {
 };
 
 const StyledButtonMenu = styled.div<StyledButtonMenuProps>`
-  background-color: #FF9D3A;
+  background-color: #FFCBBD;
   border-radius: 16px;
   display: block;
   width : 32px;
@@ -27,7 +27,7 @@ const StyledButtonMenu = styled.div<StyledButtonMenuProps>`
     margin-left: 0px; // To avoid focus shadow overlap
   }
   svg {
-    fill: ${({ theme }) => theme.colors.white};
+    fill: ${({ theme }) => theme.colors.text};
   }
   ${space}
 `;

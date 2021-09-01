@@ -1413,9 +1413,9 @@ var ButtonMenu$1 = function (_a) {
 };
 var templateObject_1$R;
 
-var InactiveButton$2 = styled__default['default'](Button)(templateObject_1$Q || (templateObject_1$Q = __makeTemplateObject(["\n  background-color: #FF9D3A;\n  color: ", ";\n  &:hover:not(:disabled):not(:active) {\n    background-color: transparent;\n  }\n"], ["\n  background-color: #FF9D3A;\n  color: ", ";\n  &:hover:not(:disabled):not(:active) {\n    background-color: transparent;\n  }\n"])), function (_a) {
+var InactiveButton$2 = styled__default['default'](Button)(templateObject_1$Q || (templateObject_1$Q = __makeTemplateObject(["\n  background-color: #FFCBBD;\n  color: ", ";\n  &:hover:not(:disabled):not(:active) {\n    background-color: transparent;\n  }\n"], ["\n  background-color: #FFCBBD;\n  color: ", ";\n  &:hover:not(:disabled):not(:active) {\n    background-color: transparent;\n  }\n"])), function (_a) {
     var theme = _a.theme, variant = _a.variant;
-    return (variant === variants$5.PRIMARY ? theme.colors.white : theme.colors.textSubtle);
+    return (variant === variants$5.PRIMARY ? theme.colors.primary : theme.colors.textSubtle);
 });
 var ButtonMenuItem = function (_a) {
     var _b = _a.isActive, isActive = _b === void 0 ? false : _b, _c = _a.variant, variant = _c === void 0 ? variants$5.PRIMARY : _c, as = _a.as, props = __rest(_a, ["isActive", "variant", "as"]);
@@ -1895,7 +1895,7 @@ var getBackgroundColor = function (_a) {
 };
 var StyledButtonMenu$1 = styled__default['default'].div(templateObject_1$x || (templateObject_1$x = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 16px;\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 0px; // To avoid focus shadow overlap\n  }\n  svg {\n    fill: ", ";\n  }\n  ", "\n"], ["\n  background-color: ", ";\n  border-radius: 16px;\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 0px; // To avoid focus shadow overlap\n  }\n  svg {\n    fill: ", ";\n  }\n  ", "\n"])), getBackgroundColor, function (_a) {
     var theme = _a.theme;
-    return theme.colors.white;
+    return theme.colors.text;
 }, styledSystem.space);
 var MobileButtonMenu = function (_a) {
     var _b = _a.activeIndex, activeIndex = _b === void 0 ? 0 : _b, _c = _a.scale, scale = _c === void 0 ? scales$8.MD : _c, _d = _a.variant, variant = _d === void 0 ? variants$5.PRIMARY : _d, onItemClick = _a.onItemClick, children = _a.children, props = __rest(_a, ["activeIndex", "scale", "variant", "onItemClick", "children"]);
@@ -2868,9 +2868,9 @@ Toggle.defaultProps = {
     scale: scales.MD,
 };
 
-var StyledButtonMenu = styled__default['default'].div(templateObject_1$h || (templateObject_1$h = __makeTemplateObject(["\n  background-color: #FF9D3A;\n  border-radius: 16px;\n  display: block;\n  width : 32px;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 0px; // To avoid focus shadow overlap\n  }\n  svg {\n    fill: ", ";\n  }\n  ", "\n"], ["\n  background-color: #FF9D3A;\n  border-radius: 16px;\n  display: block;\n  width : 32px;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 0px; // To avoid focus shadow overlap\n  }\n  svg {\n    fill: ", ";\n  }\n  ", "\n"])), function (_a) {
+var StyledButtonMenu = styled__default['default'].div(templateObject_1$h || (templateObject_1$h = __makeTemplateObject(["\n  background-color: #FFCBBD;\n  border-radius: 16px;\n  display: block;\n  width : 32px;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 0px; // To avoid focus shadow overlap\n  }\n  svg {\n    fill: ", ";\n  }\n  ", "\n"], ["\n  background-color: #FFCBBD;\n  border-radius: 16px;\n  display: block;\n  width : 32px;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 0px; // To avoid focus shadow overlap\n  }\n  svg {\n    fill: ", ";\n  }\n  ", "\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.colors.white;
+    return theme.colors.text;
 }, styledSystem.space);
 var VButtonMenu = function (_a) {
     var _b = _a.activeIndex, activeIndex = _b === void 0 ? 0 : _b, _c = _a.scale, scale = _c === void 0 ? scales$8.MD : _c, _d = _a.variant, variant = _d === void 0 ? variants$5.PRIMARY : _d, onItemClick = _a.onItemClick, children = _a.children, props = __rest(_a, ["activeIndex", "scale", "variant", "onItemClick", "children"]);
