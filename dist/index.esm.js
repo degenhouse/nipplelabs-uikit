@@ -252,7 +252,7 @@ var getDisabledStyles = function (_a) {
     if ($isLoading === true) {
         return "\n      &:disabled,\n      &.pancake-button--disabled {\n        cursor: not-allowed;\n      }\n    ";
     }
-    return "\n    &:disabled,\n    &.pancake-button--disabled {\n      background-color: " + theme.colors.backgroundDisabled + ";\n      border-color: " + theme.colors.backgroundDisabled + ";\n      box-shadow: none;\n      color: " + theme.colors.textDisabled + ";\n      cursor: not-allowed;\n    }\n  ";
+    return "\n    &:disabled,\n    &.pancake-button--disabled {\n      background-color: " + theme.colors.backgroundDisabled + ";\n      border-color: " + theme.colors.backgroundDisabled + ";\n      box-shadow: none;\n      color: " + theme.colors.primary + ";\n      cursor: not-allowed;\n    }\n  ";
 };
 /**
  * This is to get around an issue where if you use a Link component
@@ -1301,7 +1301,7 @@ var Input$1 = styled.input(templateObject_1$V || (templateObject_1$V = __makeTem
     return theme.colors.text;
 }, getHeight, function (_a) {
     var theme = _a.theme;
-    return theme.colors.textSubtle;
+    return theme.colors.primary;
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.backgroundDisabled;
