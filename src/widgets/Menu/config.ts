@@ -58,6 +58,11 @@ export const links = [
     href: "/buyftm",
   },
   {
+    label: "Referral",
+    icon: "ReferralIcon",
+    href: "/buyftm",
+  },
+  {
     label: "More",
     icon: "MoreIcon",
     items: [
